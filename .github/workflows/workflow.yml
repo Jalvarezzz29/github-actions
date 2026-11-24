@@ -1,0 +1,17 @@
+name: hola-mundo
+on: [push]
+
+job:
+  primer job:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Descargar el codigo
+      uses: actions/checkout@v4 
+
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.12
+
+    - name: Ejecutar Codigo
+      run: python ejemplo.py
